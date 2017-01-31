@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryCo.Repositories", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryCo.Tests", "GroceryCo.Tests\GroceryCo.Tests.csproj", "{B61F9CEA-7D76-42CB-985D-5A7D9E160678}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroceryCo.Core", "GroceryCo.Core\GroceryCo.Core.csproj", "{64DFB8B0-4469-4C26-9ECA-CFD7ACE74143}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B61F9CEA-7D76-42CB-985D-5A7D9E160678}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61F9CEA-7D76-42CB-985D-5A7D9E160678}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61F9CEA-7D76-42CB-985D-5A7D9E160678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DFB8B0-4469-4C26-9ECA-CFD7ACE74143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DFB8B0-4469-4C26-9ECA-CFD7ACE74143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DFB8B0-4469-4C26-9ECA-CFD7ACE74143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DFB8B0-4469-4C26-9ECA-CFD7ACE74143}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

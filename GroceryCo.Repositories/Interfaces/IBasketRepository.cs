@@ -1,7 +1,10 @@
-﻿namespace GroceryCo.Repositories.Interfaces
+﻿using System.Collections.Generic;
+using GroceryCo.Core.Models;
+
+namespace GroceryCo.Repositories.Interfaces
 {
-    public class IBasketRepository
+    public interface IBasketRepository : IRepository<BasketItem>
     {
-        
+        IEnumerable<BasketItem> GetBasketItems();
     }
 }

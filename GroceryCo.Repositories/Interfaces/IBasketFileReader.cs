@@ -1,6 +1,6 @@
 ﻿namespace GroceryCo.Repositories.Interfaces
 {
-    public interface IPriceCatalogRepository
+    public interface IBasketFileReader : IFileReaderBase
     {
         
     }

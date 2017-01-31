@@ -47,6 +47,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GroceryCo.Core\GroceryCo.Core.csproj">
+      <Project>{64dfb8b0-4469-4c26-9eca-cfd7ace74143}</Project>
+      <Name>GroceryCo.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GroceryCo.Repositories\GroceryCo.Repositories.csproj">
       <Project>{cadd344f-2874-45c5-a7c6-d6034bb57c74}</Project>
       <Name>GroceryCo.Repositories</Name>
