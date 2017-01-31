@@ -10,7 +10,10 @@ namespace GroceryCo.Repositories
         public override void Load()
         {
             Bind<IProductCatalogFileReader>().To<ProductCatalogFileReader>();
-            
+            Bind<IBasketFileReader>().To<BasketFileReader>();
+
+            Bind<IBasketRepository>().To<BasketRepository>();
+            Bind<IProductCatalogRepository>().To<IProductCatalogRepository>();
         }
     }
 }

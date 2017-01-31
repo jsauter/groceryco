@@ -11,24 +11,19 @@ namespace GroceryCo.Tests.RepositoryTests
     [TestClass]
     public class TestBasketRepository
     {
+        private readonly BasketTestData _basketTestData = new BasketTestData();
 
         [TestMethod]
         public void TestLoadANormalBasket()
         {
             var fileReader = new Mock<IBasketFileReader>();
-            fileReader.Setup(x => x.GetTextReader()).Returns(GetValidTestData);
+            fileReader.Setup(x => x.GetTextReader()).Returns(new BasketTestData().GetValidTestData);
             var testRepository = new BasketRepository(fileReader.Object);
 
             var catalog = testRepository.GetBasketItems().ToList();
 
             Assert.IsTrue(catalog.Count() ==  3);
 
-        }
-
-        private TextReader GetValidTestData()
-        {
-            var fileString = @"Name" + Environment.NewLine + "Apple" + Environment.NewLine + "Banana" + Environment.NewLine + "Apple";
-            return new StringReader(fileString);
         }
     }
 }

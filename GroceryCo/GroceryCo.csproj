@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GroceryCo.Core\GroceryCo.Core.csproj">
+      <Project>{64dfb8b0-4469-4c26-9eca-cfd7ace74143}</Project>
+      <Name>GroceryCo.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GroceryCo.Services\GroceryCo.Services.csproj">
       <Project>{18deee1c-a550-4fa9-8653-659f0fa79088}</Project>
       <Name>GroceryCo.Services</Name>

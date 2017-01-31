@@ -2,6 +2,7 @@
 {
     public class ProductCatalogItem : ItemBase
     {
-        public float Price { get; set; }
+        public decimal Price { get; set; }
+        public decimal SalePrice { get; set; }
     }
 }
