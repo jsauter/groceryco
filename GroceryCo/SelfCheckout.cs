@@ -11,11 +11,13 @@ namespace GroceryCo
     {
         private IPriceService _priceService;
         private IBasketService _basketService;
+        private IRegisterService _registerService;
 
-        public SelfCheckout(IPriceService priceService, IBasketService basketService)
+        public SelfCheckout(IPriceService priceService, IBasketService basketService, IRegisterService registerService)
         {
             _priceService = priceService;
             _basketService = basketService;
+            _registerService = registerService;
         }
 
         public void Run()
@@ -40,11 +42,10 @@ namespace GroceryCo
                         Console.WriteLine($"BEEP - {basketItem.Name} scanned. ${_priceService.GetItemPrice(basketItem)}");                        
                     }
 
-                    basketItem.IsCheckedOut = true;
+                    _registerService.Scan(basketItem);   
                 }
                 catch (ItemInBasketNotFoundException)
-                {
-                    basketItem.IsCheckedOut = false;
+                {                    
                     Console.WriteLine($"Item {basketItem.Name} not in system, please see customer service rep.");
                 }
 
@@ -58,20 +59,14 @@ namespace GroceryCo
             Console.WriteLine("Reciept for purchase at GroceryCo");
             Console.WriteLine();
             Console.WriteLine();
-
-            var checkedOutItems = listOfBasketItems.Where(x => x.IsCheckedOut)
-                .GroupBy(n => n.Name, (key, element) => new { Key = key, Count = element.Distinct().Count() });              
-
-            foreach (var item in checkedOutItems)
+            
+            foreach (var item in _registerService.GetCombinedPrices())
             {
-                Console.WriteLine($"{item.Key} x {item.Count} ${_priceService.GetItemPrice(item.Key) * item.Count}");    
+                Console.WriteLine($"{item.Key} x {item.Value} ${_priceService.GetItemPrice(item.Key) * item.Value}");    
             }
 
-            var total = listOfBasketItems.Where(x => x.IsCheckedOut).Sum(x => _priceService.GetItemPrice(x.Name));
-
-
             Console.WriteLine();
-            Console.WriteLine($"Total: ${total}");
+            Console.WriteLine($"Total: ${_registerService.GetTotalPrice()}");
 
             Console.WriteLine();
             Console.WriteLine();

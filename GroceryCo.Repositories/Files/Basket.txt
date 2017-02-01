@@ -1,6 +1,6 @@
-﻿Name,IsCheckedOut
-Apple,0
-Orange,0
-Banana,0
-Apple,0
-Cheese,0
+﻿Name
+Apple
+Orange
+Banana
+Apple
+Cheese
