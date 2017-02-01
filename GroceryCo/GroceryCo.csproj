@@ -47,14 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bindings.cs" />
+    <Compile Include="Interfaces\ISelfCheckout.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelfCheckout.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DependencyResolver\GroceryCo.DependencyResolver.csproj">
+      <Project>{816dcd74-7710-4226-bc1a-82786b3e1b27}</Project>
+      <Name>GroceryCo.DependencyResolver</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GroceryCo.Core\GroceryCo.Core.csproj">
       <Project>{64dfb8b0-4469-4c26-9eca-cfd7ace74143}</Project>
       <Name>GroceryCo.Core</Name>

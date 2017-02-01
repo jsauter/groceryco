@@ -6,6 +6,5 @@ namespace GroceryCo.Repositories.Interfaces
 {
     public interface IProductCatalogRepository : IRepository<ProductCatalogItem>
     {
-        IEnumerable<ProductCatalogItem> GetProductCatalog();
     }
 }

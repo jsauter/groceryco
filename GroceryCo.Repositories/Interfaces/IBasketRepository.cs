@@ -5,6 +5,5 @@ namespace GroceryCo.Repositories.Interfaces
 {
     public interface IBasketRepository : IRepository<BasketItem>
     {
-        IEnumerable<BasketItem> GetBasketItems();
     }
 }

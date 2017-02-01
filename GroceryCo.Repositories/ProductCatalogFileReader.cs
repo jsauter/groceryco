@@ -1,6 +1,4 @@
-﻿using System.IO;
-using System.Xml;
-using GroceryCo.Repositories.Interfaces;
+﻿using GroceryCo.Repositories.Interfaces;
 
 namespace GroceryCo.Repositories
 {

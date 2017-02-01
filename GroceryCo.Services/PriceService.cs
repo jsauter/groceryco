@@ -21,7 +21,15 @@ namespace GroceryCo.Services
 
             return catalogItem.SalePrice == 0 ? catalogItem.Price : catalogItem.SalePrice;
         }
-        
+
+        public decimal GetItemPrice(string itemName)
+        {
+            return GetItemPrice(new BasketItem()
+            {
+                Name = itemName
+            });
+        }
+
         public bool IsItemOnSale(BasketItem item)
         {
             var catalogItem = GetProductCatalogItem(item);
@@ -31,7 +39,7 @@ namespace GroceryCo.Services
 
         private ProductCatalogItem GetProductCatalogItem(BasketItem item)
         {
-            var catalogItem = _productCatalogRepository.GetProductCatalog().Where(x => x.Name == item.Name).FirstOrDefault();
+            var catalogItem = _productCatalogRepository.GetItems().Where(x => x.Name == item.Name).FirstOrDefault();
 
             if (catalogItem == null)
             {

@@ -20,7 +20,7 @@ namespace GroceryCo.Tests.RepositoryTests
             fileReader.Setup(x => x.GetTextReader()).Returns(new BasketTestData().GetValidTestData);
             var testRepository = new BasketRepository(fileReader.Object);
 
-            var catalog = testRepository.GetBasketItems().ToList();
+            var catalog = testRepository.GetItems().ToList();
 
             Assert.IsTrue(catalog.Count() ==  3);
 
