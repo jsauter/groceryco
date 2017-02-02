@@ -6,7 +6,7 @@ namespace GroceryCo.Services.Interfaces
     public interface IRegisterService
     {
         void Scan(BasketItem item);
-        IEnumerable<KeyValuePair<string,decimal>> GetCombinedPrices();
+        IEnumerable<KeyValuePair<string,decimal>> GetConsolidatedItems();
         decimal GetTotalPrice();
     }
 }

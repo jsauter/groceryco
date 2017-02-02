@@ -66,6 +66,7 @@
     <Compile Include="RepositoryTests\TestCatalogRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTests\PriceServiceTests.cs" />
+    <Compile Include="ServiceTests\RegisterServiceTests.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

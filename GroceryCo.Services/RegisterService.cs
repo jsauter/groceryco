@@ -21,7 +21,11 @@ namespace GroceryCo.Services
             _scannedBasketItems.Add(item);
         }
 
-        public IEnumerable<KeyValuePair<string,decimal>> GetCombinedPrices()
+        /// <summary>
+        /// This method returns a set of grouped values based on the name key and their count
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<KeyValuePair<string,decimal>> GetConsolidatedItems()
         {
            return _scannedBasketItems.GroupBy(n => n.Name, (key, element) => new KeyValuePair<string, decimal>(key, element.Distinct().Count()));
         }

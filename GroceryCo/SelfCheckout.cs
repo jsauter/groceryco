@@ -60,7 +60,7 @@ namespace GroceryCo
             Console.WriteLine();
             Console.WriteLine();
             
-            foreach (var item in _registerService.GetCombinedPrices())
+            foreach (var item in _registerService.GetConsolidatedItems())
             {
                 Console.WriteLine($"{item.Key} x {item.Value} ${_priceService.GetItemPrice(item.Key) * item.Value}");    
             }
