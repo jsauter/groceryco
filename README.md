@@ -9,13 +9,13 @@ to have a good time and you will get exceptions.
 
 **Catalog.txt**
 
-Name,Price,SalePrice
+*Name,Price,SalePrice*
 
 If there is a sale price in the row, the system will use that price.  So in if you want to remove a sale, set that column to 0.00.
 
 **Basket.txt**
 
-Name
+*Name*
 
 Just fill in the basket with a name of the item you want to buy.  If you add something that is not in the catalog there will be an item not found exception.
 
